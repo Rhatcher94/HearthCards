@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Hearth Cards</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+     
+
+
+<div class="container border border-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#"><img src="resources/logo.png" alt="" style="width: 20px;"></a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="#" id="GetCards">View Cards</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" id="ViewDeck">View Deck</a>
+            </li>                 
+            <li class="nav-item dropdown" id="classList">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                 Class
+                </a>
+                <div class="dropdown-menu">
+                  <button class="dropdown-item" data-class="Warrior" >Warrior</button>
+                  <button class="dropdown-item" data-class="Mage" >Mage</button>
+                  <button class="dropdown-item" data-class="Rogue" >Rogue</button>
+                  <button class="dropdown-item" data-class="Druid" >Druid</button>
+                  <button class="dropdown-item" data-class="Priest" >Priest</button>
+                  <button class="dropdown-item" data-class="Warlock" >Warlock</button>
+                  <button class="dropdown-item" data-class="Shaman" >Shaman</button>
+                  <button class="dropdown-item" data-class="Paladin" >Paladin</button>
+                  <button class="dropdown-item" data-class="Hunter" >Hunter</button>
+                  <button class="dropdown-item" data-class="Neutral" >Neutral</button>
+                </div>
+              </li>
+        </ul>
+    </nav>      
+
+    <div class="row m-4">
+        <div class="col-sm-3">
+            <button class="btn btn-primary btn-block" id = "PrevPage">Prev Page</button>
+        </div>
+        <div class="col-sm-6 text-center">
+            <p id="pages"></p>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary btn-block" id = "NextPage">Next Page</button>
+        </div>
+    </div>    
+    
+    <div class="row" id="cards">
+        
+    </div>
+
+
+    <div class="row m-4">
+        <div class="col-sm-3">
+            <button class="btn btn-primary btn-block" id = "PrevPage">Prev Page</button>
+        </div>
+        <div class="col-sm-6 text-center">
+            <p id="pages"></p>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary btn-block" id = "NextPage">Next Page</button>
+        </div>
+    </div>  
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
