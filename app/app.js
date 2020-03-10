@@ -99,7 +99,7 @@ function loadCardAPI(){
   viewDeckBtn.style.display = "none";  
   classList.style.display = "none";
   hideElements();
-  document.getElementById("cards").innerHTML = "Loading... Please Wait "
+  document.getElementById("cards").innerHTML = "Fetching Data from RapidApi"
   axios.get(RAPIDAPI_API_URL, { headers: RAPIDAPI_REQUEST_HEADERS })
     .then(response => { 
       const data = response.data.Basic;    
