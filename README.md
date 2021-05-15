@@ -16,3 +16,8 @@ https://rhatcher94.github.io/HearthCards/
 - Add all sets.
 - User system
 - Ability for user to share deck. 
+
+## Visuals
+
+### Customer landing page and login
+![alt text](https://github.com/Rhatcher94/HearthCards/blob/master/README_ASSETS/HearthCards.gif)
