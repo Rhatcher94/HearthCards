@@ -19,5 +19,5 @@ https://rhatcher94.github.io/HearthCards/
 
 ## Visuals
 
-### Using the HearthCards page
+### Using HearthCards
 ![alt text](https://github.com/Rhatcher94/HearthCards/blob/master/README_ASSETS/HearthCards.gif)
