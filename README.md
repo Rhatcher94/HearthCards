@@ -19,5 +19,5 @@ https://rhatcher94.github.io/HearthCards/
 
 ## Visuals
 
-### Customer landing page and login
+### Using the HearthCards page
 ![alt text](https://github.com/Rhatcher94/HearthCards/blob/master/README_ASSETS/HearthCards.gif)
