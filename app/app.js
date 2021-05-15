@@ -19,13 +19,14 @@ var endIndex = cardsToShow
 const cards = new Array()
 const myDeck = new Array()
 
-const RAPIDAPI_API_URL = 'https://omgvamp-hearthstone-v1.p.rapidapi.com/cards'
-const RAPIDAPI_REQUEST_HEADERS = {
-	'content-type': 'application/octet-stream',
-	'x-rapidapi-host': 'omgvamp-hearthstone-v1.p.rapidapi.com',
-	'x-rapidapi-key': '59489fd7femshd11da986701b4cep1b9b50jsn3ce72df24df4',
-}
-
+const options = {
+	method: 'GET',
+	url: 'https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/sets/classic',
+	headers: {
+	  'x-rapidapi-key': '59489fd7femshd11da986701b4cep1b9b50jsn3ce72df24df4',
+	  'x-rapidapi-host': 'omgvamp-hearthstone-v1.p.rapidapi.com'
+	}
+  };
 /* ------------------------ ON CLICKS --------------------------------------*/
 
 //Display call cards in the array.
@@ -73,9 +74,9 @@ function loadCardAPI() {
 	hideElements()
 	document.getElementById('cards').innerHTML = 'Fetching Data from RapidApi'
 	axios
-		.get(RAPIDAPI_API_URL, {headers: RAPIDAPI_REQUEST_HEADERS})
+		.request(options)
 		.then((response) => {
-			const data = response.data.Basic
+			const data = response.data
 			data.forEach((element) => {
 				//Filters for the cards we want.
 				if (
@@ -181,6 +182,7 @@ function getACard(cardName) {
 
 //Called when the Cards finish loading into the array.
 function finishLoad() {
+	console.log("here")
 	getCardsBtn.style.display = 'block'
 	viewDeckBtn.style.display = 'block'
 	classList.style.display = 'block'
